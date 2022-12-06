@@ -20,17 +20,17 @@ class MovieList{
             allmovies.append(Movie(moviename: moviename[movienameindex]))
         }
     }
-    
+    // Delete function
     func deleteMovie(index: Int){
         allmovies.remove(at: index)
     }
-    
+    // Move from one row to another
     func moveMovie(from fromIndex: Int, to toIndex: Int){
         let temp = allmovies[fromIndex]
         allmovies.remove(at: fromIndex)
         allmovies.insert(temp, at: toIndex)
     }
-    
+    //Adding another movie
     @discardableResult func addmovie(moviename: String) -> Movie{
         let movie = Movie(moviename: moviename)
         allmovies.append(movie)

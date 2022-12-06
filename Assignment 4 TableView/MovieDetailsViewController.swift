@@ -22,9 +22,10 @@ class MovieDetailsViewController: UIViewController {
 
         
     }
-    
+    //making only those rows showed, if it contains some data.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         if movie != nil{
             MovieNameTextField.text = movie.moviename
         }
