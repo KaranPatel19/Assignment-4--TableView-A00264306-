@@ -108,14 +108,20 @@ class MovieTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let index = tableView.indexPathForSelectedRow!.row
-        
-        let movie = movielist.allmovies[index]
-        
-
         let destination = segue.destination as! MovieDetailsViewController
-        destination.movie = movie
-        
+        if segue.identifier == "Add"  { 
+            
+           // let movie = movielist.addmovie()
+            destination.movielist = movielist
+        } else if(segue.identifier == "edit"){
+            let index = tableView.indexPathForSelectedRow!.row
+            let movie = movielist.allmovies[index]
+            destination.movie = movie
+
+        }
+        else{
+            preconditionFailure("Identifier Unknown")
+            }
     
     }
     

@@ -30,4 +30,10 @@ class MovieList{
         allmovies.remove(at: fromIndex)
         allmovies.insert(temp, at: toIndex)
     }
+    
+    @discardableResult func addmovie(moviename: String) -> Movie{
+        let movie = Movie(moviename: moviename)
+        allmovies.append(movie)
+        return movie
+    }
 }

@@ -12,27 +12,34 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var MovieNameTextField: UITextField!
     
     var movie: Movie!
+    var movielist: MovieList!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        MovieNameTextField.text = movie.moviename
-        print(#function)
 
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#function)
-        
+        if movie != nil{
+            MovieNameTextField.text = movie.moviename
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        movie.moviename = MovieNameTextField.text ?? ""
-        print(#function)
+        if movie != nil{
+            movie.moviename = MovieNameTextField.text ?? ""
+        }
+        else{
+            if MovieNameTextField.text != "" {
+                movielist.addmovie(moviename: MovieNameTextField.text!)
+            }
+        }
 
     }
      
