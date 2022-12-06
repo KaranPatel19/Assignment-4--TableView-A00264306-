@@ -20,4 +20,8 @@ class MovieList{
             allmovies.append(Movie(moviename: moviename[movienameindex]))
         }
     }
+    
+    func deleteMovie(index: Int){
+        allmovies.remove(at: index)
+    }
 }
