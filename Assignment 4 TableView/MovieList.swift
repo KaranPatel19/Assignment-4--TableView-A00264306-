@@ -24,4 +24,10 @@ class MovieList{
     func deleteMovie(index: Int){
         allmovies.remove(at: index)
     }
+    
+    func moveMovie(from fromIndex: Int, to toIndex: Int){
+        let temp = allmovies[fromIndex]
+        allmovies.remove(at: fromIndex)
+        allmovies.insert(temp, at: toIndex)
+    }
 }
