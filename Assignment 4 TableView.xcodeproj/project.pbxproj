@@ -15,6 +15,7 @@
 		7DED6A0B293EB0C1005F333E /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED6A0A293EB0C1005F333E /* MovieTableViewController.swift */; };
 		7DED6A0D293EB788005F333E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED6A0C293EB788005F333E /* Movie.swift */; };
 		7DED6A0F293EB7A3005F333E /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED6A0E293EB7A3005F333E /* MovieList.swift */; };
+		7DED6A11293EBFDC005F333E /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED6A10293EBFDC005F333E /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7DED6A0A293EB0C1005F333E /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 		7DED6A0C293EB788005F333E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		7DED6A0E293EB7A3005F333E /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		7DED6A10293EBFDC005F333E /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7D3B9DF2293E9802005A3B90 /* AppDelegate.swift */,
 				7D3B9DF4293E9802005A3B90 /* SceneDelegate.swift */,
 				7DED6A0A293EB0C1005F333E /* MovieTableViewController.swift */,
+				7DED6A10293EBFDC005F333E /* MovieDetailsViewController.swift */,
 				7D3B9DF8293E9802005A3B90 /* Main.storyboard */,
 				7DED6A0C293EB788005F333E /* Movie.swift */,
 				7DED6A0E293EB7A3005F333E /* MovieList.swift */,
@@ -146,6 +149,7 @@
 			files = (
 				7D3B9DF3293E9802005A3B90 /* AppDelegate.swift in Sources */,
 				7D3B9DF5293E9802005A3B90 /* SceneDelegate.swift in Sources */,
+				7DED6A11293EBFDC005F333E /* MovieDetailsViewController.swift in Sources */,
 				7DED6A0D293EB788005F333E /* Movie.swift in Sources */,
 				7DED6A0F293EB7A3005F333E /* MovieList.swift in Sources */,
 				7DED6A0B293EB0C1005F333E /* MovieTableViewController.swift in Sources */,

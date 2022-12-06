@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fzc-2v-Bra">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iCn-Yv-FVY">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movie Table View Controller-->
+        <!--Movies-->
         <scene sceneID="h8F-dT-w6S">
             <objects>
                 <tableViewController id="Fzc-2v-Bra" customClass="MovieTableViewController" customModule="Assignment_4_TableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movie" textLabel="dat-xX-tiP" style="IBUITableViewCellStyleDefault" id="kKY-6D-U3Y">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movie" textLabel="dat-xX-tiP" style="IBUITableViewCellStyleDefault" id="kKY-6D-U3Y" customClass="movie">
                                 <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kKY-6D-U3Y" id="5dy-Jc-28P">
@@ -32,6 +33,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="faK-UR-imR" kind="show" id="JeT-E7-tN4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,10 +43,45 @@
                             <outlet property="delegate" destination="Fzc-2v-Bra" id="X8o-Gl-Vma"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Movies" id="Pif-8I-OHY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGY-Pm-vgs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="-31"/>
+            <point key="canvasLocation" x="1156.9230769230769" y="-55.45023696682464"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="P7X-me-PoY">
+            <objects>
+                <viewController id="faK-UR-imR" customClass="MovieDetailsViewController" customModule="Assignment_4_TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ex5-fM-XMY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9wz-C2-qf4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qRE-AG-44Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZa-5k-4WL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="-55"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TRF-bF-CF7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iCn-Yv-FVY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XdC-Bc-JXb">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fzc-2v-Bra" kind="relationship" relationship="rootViewController" id="9l4-77-xNx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8eO-bD-6pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="227.69230769230768" y="-55.45023696682464"/>
         </scene>
     </scenes>
     <resources>
